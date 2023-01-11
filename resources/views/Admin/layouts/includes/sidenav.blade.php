@@ -13,14 +13,14 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item @if ($page == 'Dashboard') active @endif">
                 <a class="nav-link" href="{{ url('admin/') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <!-- Nav Item - category -->
-            <li class="nav-item">
+            <li class="nav-item @if ($page == 'Categories') active @endif">
                 <a class="nav-link" href="{{ url('admin/category/') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Category</span></a>

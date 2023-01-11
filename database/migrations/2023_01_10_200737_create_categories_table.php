@@ -17,6 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
+            $table->smallInteger('status');
+            $table->smallInteger('created_by');
+            $table->smallInteger('updated_by')->nullable();
             $table->timestamps();
         });
     }

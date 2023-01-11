@@ -43,7 +43,9 @@ Route::group(['middleware' => 'admin'], function () {
             Route::get('/', [CategoryController::class, 'categoryIndex'])->name('admin.category');
             Route::post('/add', [CategoryController::class, 'categoryCreate'])->name('admin.add_category');
 
-            // Route::post('/delete', [CategoryController::class, 'categoryDelete']);
+            Route::post('/update/{category_id}', [CategoryController::class, 'categoryUpdate']);
+
+            Route::post('/delete/{category_id}', [CategoryController::class, 'categoryDelete']);
         });
     });
 });
